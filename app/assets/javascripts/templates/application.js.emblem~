@@ -1,0 +1,16 @@
+header
+  div.sticky
+    nav.top-bar role="navigation" data-topbar=""
+      ul.title-area.left
+       li.name
+         h1
+           a href="#" Ember CRM
+
+
+section#main
+  nav#sidebar
+    = outlet
+  section#person
+    = lead     
+
+footer
