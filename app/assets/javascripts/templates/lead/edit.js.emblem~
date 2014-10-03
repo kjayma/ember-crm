@@ -1,0 +1,7 @@
+h1
+  model.fullName
+
+fieldset
+  dl
+    dt: label First Name:
+    dd: view Ember.TextField value=model.firstName

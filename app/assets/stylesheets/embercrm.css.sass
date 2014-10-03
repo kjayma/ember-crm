@@ -3,15 +3,29 @@ body
   overflow: hidden
 section#main
   position: relative
-section#person
+article#lead
   position: relative 
   left: 390
   top: 1em
   overflow: auto
+  h1
+    width: auto
+    display: inline-block
   .ember-select
     width: auto
+    padding-right: 19px
   .ember-text-area
     width: 30em
+  .unsaved, .saving
+    display: inline-block    
+    margin-left: 1em
+  .unsaved
+    color: red
+  .saving
+    color: green
+  .edit
+    display: inline-block
+    margin-left: 1em
 nav#sidebar
   position: fixed 
   top: 57
