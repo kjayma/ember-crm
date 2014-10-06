@@ -70,6 +70,9 @@ GEM
     erubis (2.7.0)
     execjs (2.2.1)
     ffaker (1.25.0)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -158,6 +161,7 @@ DEPENDENCIES
   ember-source
   emblem-rails
   ffaker
+  foundation-icons-sass-rails
   foundation-rails
   haml
   jbuilder (~> 2.0)

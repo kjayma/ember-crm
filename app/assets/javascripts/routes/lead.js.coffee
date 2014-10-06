@@ -1,12 +1,3 @@
 App.LeadRoute = Ember.Route.extend
   model: (params) -> @store.find 'lead', params.id
-
-  renderTemplate: (controller, model) ->
-    @render(
-      'lead', 
-      {
-        into: 'application', 
-        outlet: 'lead'
-      }
-    )
     

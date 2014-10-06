@@ -8,9 +8,6 @@ header
 
 
 section#main
-  nav#sidebar
-    = outlet
-  article#lead  
-    = outlet 'lead'     
+  = outlet
 
 footer

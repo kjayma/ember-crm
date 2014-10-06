@@ -10,7 +10,5 @@ header
 section#main
   nav#sidebar
     = outlet
-  section#person
-    = outlet 'lead'     
 
 footer

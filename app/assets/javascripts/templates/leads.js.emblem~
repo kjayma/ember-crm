@@ -1,9 +1,16 @@
-section#header 
-  h1 Leads
-ul.side-nav
-  each lead in controller
-    link-to 'lead' lead tagName="li"
-      a= lead.fullName
+nav#sidebar
+  section#header 
+    h1 
+      |Leads
+      link-to 'leads.new'
+        button.tiny.right.secondary  
+          |New Lead
+    view Ember.TextField value=search placeholder="search" classNames="search"
+  ul.side-nav
+    each lead in controller
+      link-to 'lead' lead tagName="li"
+        a= lead.fullName
 
-
-outlet
+article#lead  
+  = outlet      
+      

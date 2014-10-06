@@ -1,35 +1,38 @@
-= outlet 'leadEdit'
+= outlet 
 
-h1
-  model.fullName
-link-to 'edit' 'lead.edit' model classNames='edit'
-
-p
-  ' Name:
-  model.fullName
-
-p
-  ' Email:
-  model.email
-
-p
-  ' Phone:
-  model.phone
-
-p
-  label Status:
-  '
-  view Ember.Select content=App.Lead.STATUSES value=model.status
-
-p
-  label Notes:
-  '
-  view Ember.TextArea value=model.notes
-
-p
-  button type='submit' click='saveChanges'
-    ' Save Changes
-  if showUnsavedMessage
-    .unsaved unsaved changes
-  if isSaving
-    .saving saving...
+unless isEditing
+  h1
+    model.fullName
+  link-to 'edit' 'lead.edit' model classNames='edit'
+  
+  p
+    ' Name:
+    model.fullName
+  
+  p
+    ' Email:
+    model.email
+  
+  p
+    ' Phone:
+    model.phone
+  
+  p
+    label Status:
+    '
+    view Ember.Select content=App.Lead.STATUSES value=model.status
+  
+  p
+    label Notes:
+    '
+    view Ember.TextArea value=model.notes
+  
+  p
+    button type='submit' click='saveChanges' class=showUnsavedMessage::disabled
+      ' Save Changes
+    if showUnsavedMessage
+      .unsaved unsaved changes
+    if isSaving
+      .saving saving...
+    a.delete href="#" click="delete" 
+      'delete

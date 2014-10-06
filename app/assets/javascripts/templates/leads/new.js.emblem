@@ -1,0 +1,24 @@
+h1 New Lead 
+
+if showError 
+  div data-alert=true class="alert-box alert"
+    |Leads must have a first and last name.
+
+dl
+  dt: label First Name:
+  dd: view Ember.TextField value=blank.fields.firstName
+
+dl 
+  dt: label last Name:
+  dd: view Ember.TextField value=blank.fields.lastName
+
+dl
+  dt: label Email:
+  dd: view Ember.TextField value=blank.fields.email
+
+dl
+  dt: label Phone:
+  dd: view Ember.TextField value=blank.fields.phone
+
+button click="createLead"
+  'Create Lead
